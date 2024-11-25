@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>conection type</title>
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color"content="#F3F3E0">
+  <style>
+    body{
+      background-color:#EBEAFF;
+    }
+    #div{
+      margin-top:5px;
+      margin-left:5px;
+      padding:5px;
+      width:380px;
+      height:180px;
+      background-color:black ;
+      color:yellow;
+      border-radius:5px;
+      border-color:yellow;
+    }
+  </style>
+  </head>
+  <body>
+    <center>
+    <div id="div">
+      <p id="type" class="p"></p>
+      <p id="max" class="p"></p>
+      <p id="effect"class="p"></p>
+      <p id="rtt"class="p"></p>
+      <p id="memory"></p>
+    </div>
+    </center>
+    <script>
+          // Get the connection type.
+   var type = navigator.connection.type;
+  // Get an upper bound on the downlink speed of the first network hop
+   var max = navigator.connection.downlinkMax;
+   var rtt=navigator.connection.rtt;
+   var effect=navigator.connection.effectiveType;
+   const memory = navigator.deviceMemory;
+   document.getElementById("type").innerHTML=type;
+   document.getElementById("max").innerHTML=max;
+   document.getElementById("rtt").innerHTML=rtt;
+   document.getElementById("effect").innerHTML=effect;
+   document.getElementById("memory").innerHTML=memory+"Gb deviceMemory";
+    </script>
+  </body>
+</html>
